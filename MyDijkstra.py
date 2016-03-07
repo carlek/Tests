@@ -1,12 +1,12 @@
 from collections import defaultdict
 from heapq import *
 
-def dijkstra(edges, f, t):
+def dijkstra(edges, from, to):
     g = defaultdict(list)
-    for l,r,c in edges:
-        g[l].append((c,r))
+    for left,right,cost in edges:
+        g[l].append((cost,right))
 
-    q, seen = [(0,f,())], set()
+    q, seen = [(0,from,())], set()
     while q:
         (cost,v1,path) = heappop(q)
         if v1 not in seen:
