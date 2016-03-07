@@ -41,6 +41,6 @@ if __name__ == "__main__":
     print(dijkstra(edges, "A", "E"))
     print("F -> G:")
     print(dijkstra(edges, "F", "G"))
-
+    print("D -> G:")
     print(dijkstra(edges, "D", "G"))
 
